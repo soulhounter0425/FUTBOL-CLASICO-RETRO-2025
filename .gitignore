@@ -1,0 +1,3 @@
+# Git va a ignorar cualquier carpeta llamada node_modules
+# sin importar dónde se encuentre en el proyecto.
+/node_modules

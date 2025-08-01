@@ -19,7 +19,7 @@ function llenarSelector() {
 }
 llenarSelector();
 
-// Evento para iniciar la Eurocopa
+// Evento para iniciar la Copa América
 document.getElementById("btn-iniciar").addEventListener("click", function () {
   const favorito = document.getElementById("seleccion-pais").value;
   if (!favorito) {
