@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Copa del Mundo Retro 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url('assets/img/competencia/mundial.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+      margin: 0;
+      padding-bottom: 140px;
+    }
+    h1 { text-align: center; margin-top: 40px; }
+    #video-intro {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      object-fit: cover; z-index: 9999; background: #000;
+      display: block;
+    }
+    #video-intro.finished { display: none; }
+    #seleccion-pais {
+      width: 320px; margin: 20px auto 14px auto; display: block;
+      border-radius: 8px; padding: 10px; font-family: inherit;
+      border: 2px solid #00cc66; background: #fff; color: #222;
+    }
+    #btn-iniciar, #ir-a-partido {
+      display: block; margin: 0 auto 18px auto;
+      background-color: #00cc66; color: #fff; font-size: 16px;
+      border: none; padding: 12px 24px; border-radius: 8px;
+      font-family: inherit; cursor: pointer; box-shadow: 2px 2px 10px #0006;
+      transition: background 0.2s;
+    }
+    #btn-iniciar:hover, #ir-a-partido:hover {
+      background: #00994d;
+    }
+    #grupos-container {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px; padding: 10px 24px; max-width: 1200px; margin: 0 auto 40px auto;
+    }
+    .grupo {
+      background: rgba(0, 0, 0, 0.68); border-radius: 20px; padding: 16px 16px 10px 16px;
+      min-height: 156px; box-shadow: 0 4px 16px #0005;
+    }
+    .grupo h2 { text-align: center; font-size: 17px; margin-bottom: 12px; color: #00ff99;}
+    .lista-equipos { list-style: none; padding: 0; margin: 0;}
+    .lista-equipos li {
+      display: flex; align-items: center; margin-bottom: 8px; font-size: 15px;
+    }
+    .lista-equipos img {
+      width: 32px; height: 32px; object-fit: contain; margin-right: 12px;
+      border-radius: 6px; background: #fff; border: 1px solid #ddd;
+    }
+    .equipo-click {
+      cursor: pointer;
+      text-decoration: underline dotted;
+      color: #fff;
+    }
+    .equipo-click:hover {
+      color: #00ff99;
+    }
+  </style>
+</head>
+<body>
+  <video id="video-intro" autoplay muted>
+    <source src="assets/video/intro_copa.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+  <audio id="bgm-copa" src="assets/audio/intro_copa.mp3" autoplay loop></audio>
+
+  <h1>Copa del Mundo Retro 2026</h1>
+  <select id="seleccion-pais"></select>
+  <button id="btn-iniciar">INICIAR MUNDIAL</button>
+  <button id="ir-a-partido" style="display:none">IR A LA CANCHA</button>
+
+  <div id="grupos-container">
+    <div class="grupo" id="grupo-a"><h2>Grupo A</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-b"><h2>Grupo B</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-c"><h2>Grupo C</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-d"><h2>Grupo D</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-e"><h2>Grupo E</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-f"><h2>Grupo F</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-g"><h2>Grupo G</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-h"><h2>Grupo H</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-i"><h2>Grupo I</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-j"><h2>Grupo J</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-k"><h2>Grupo K</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-l"><h2>Grupo L</h2><ul class="lista-equipos"></ul></div>
+  </div>
+
+  <script src="copa.js"></script>
+  <script>
+    // Oculta video intro al terminar
+    window.addEventListener('DOMContentLoaded', function() {
+      const video = document.getElementById('video-intro');
+      if (video) {
+        video.addEventListener('ended', () => {
+          video.classList.add('finished');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

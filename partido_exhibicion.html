@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partido de Exhibición - Fútbol Retro 25</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      background: url('assets/img/logo.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Press Start 2P', monospace;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .menu-container {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px white;
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    label, select {
+      font-size: 12px;
+      margin: 8px 0;
+    }
+
+    select {
+      width: 100%;
+      padding: 5px;
+      font-family: monospace;
+    }
+
+    .escudos {
+      display: flex;
+      justify-content: space-around;
+      margin: 15px 0;
+    }
+
+    .escudos img {
+      width: 60px;
+      height: auto;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h1>Partido de Exhibición</h1>
+    <p>Selecciona tu equipo local y visitante</p>
+
+    <label for="equipo-local">Equipo Local</label>
+    <select id="equipo-local">
+      <option>Brasil</option>
+      <option>Argentina</option>
+      <option>Colombia</option>
+      <option>Alemania</option>
+      <option>Albania</option>
+      <option>Andorra</option>
+      <option>arabiasaudita</option>
+      <option>Argelia</option>
+      <option>Armenia</option>
+      <option>Australia</option>
+      <option>Austria</option>
+      <option>Azerbaiyan</option>
+      <option>Bangladesh</option>
+      <option>Belgica</option>
+      <option>Bielorrusia</option>
+       <option>Bolivia</option>
+      <option>Bosnia</option>
+      <option>Brasil</option>
+      <option>Camerun</option>
+      <option>Canada</option>
+      <option>Chile</option>
+      <option>China</option>
+      <option>Chipre</option>
+      <option>Colombia</option>
+      <option>Coreadelsur</option>
+      <option>Costa de marfil</option>
+      <option>Costa rica</option>
+      <option>Croacia</option>
+      <option>Cuba</option>
+      <option>Curazao</option>
+      <option>Dinamarca</option>
+      <option>Ecuador</option>
+      <option>Egipto</option>
+      <option>El salvador</option>
+      <option>Emiratos arabes</option>
+      <option>Escocia</option>
+      <option>Eslovaquia</option>
+      <option>Eslovenia</option>
+      <option>Espana</option>
+      <option>Eslovenia</option>
+      <option>Estonia</option>
+      <option>Finlandia</option>
+      <option>Francia</option>
+      <option>Gales</option>
+      <option>Georgia</option>
+      <option>Ghana</option>
+      <option>Gibraltar</option>
+      <option>Granada</option>
+      <option>Grecia</option>
+      <option>Guatemala</option>
+      <option>Honduras</option>
+      <option>Hungria</option>
+      <option>Inglaterra</option>
+      <option>Irak</option>
+      <option>Iran</option>
+      <option>Irlanda</option>
+      <option>Irlanda del norte</option>
+      <option>Islandia</option>
+      <option>Islas feroe</option>
+      <option>Islas malvinas</option>
+      <option>Islas marshall</option>
+      <option>Islas salomon</option>
+      <option>Italia</option>
+      <option>Jamaica</option>
+      <option>Japon</option>
+      <option>Jordania</option>
+      <option>kazakhstan</option>
+      <option>kosovo</option>
+      <option>Letonia</option>
+      <option>Liechtenstein</option>
+      <option>Lituania</option>
+      <option>Luxemburgo</option>
+      <option>Macedonia</option>
+      <option>Mali</option>
+      <option>Malta</option>
+      <option>Marruecos</option>
+      <option>Martinica</option>
+      <option>Mexico</option>
+      <option>Moldavia</option>
+      <option>Montenegro</option>
+      <option>Nicaragua</option>
+      <option>Nigeria</option>
+      <option>Noruega</option>
+      <option>Nuevazelanda</option>
+      <option>Paisesbajos</option>
+      <option>Panama</option>
+      <option>Paraguay</option>
+      <option>Peru</option>
+      <option>Polonia</option>
+      <option>Portugal</option>
+      <option>Qatar</option>
+      <option>Republica dominicana</option>
+      <option>Republica checa</option>
+      <option>Rumania</option>
+      <option>Rusia</option>
+      <option>San marino</option>
+      <option>Senegal</option>
+      <option>Serbia</option>
+      <option>Sudafrica</option>
+      <option>Suecia</option>
+      <option>Suiza</option>
+      <option>Surinam</option>
+      <option>Tahiti</option>
+      <option>Tunez</option>
+      <option>Turquia</option>
+      <option>Ucrania</option>
+      <option>Uruguay</option>
+      <option>Usa</option>
+      <option>Venezuela</option>
+      
+    </select>
+
+    <div class="escudos">
+      <img id="escudo-local" src="assets/img/escudos/Brasil.png" alt="Escudo Local" />
+      <span>VS</span>
+      <img id="escudo-visitante" src="assets/img/escudos/Argentina.png" alt="Escudo Visitante" />
+    </div>
+
+    <label for="equipo-visitante">Equipo Visitante</label>
+    <select id="equipo-visitante">
+     <option>Brasil</option>
+      <option>Argentina</option>
+      <option>Colombia</option>
+      <option>Alemania</option>
+      <option>Albania</option>
+      <option>Andorra</option>
+      <option>arabiasaudita</option>
+      <option>Argelia</option>
+      <option>Armenia</option>
+      <option>Australia</option>
+      <option>Austria</option>
+      <option>Azerbaiyan</option>
+      <option>Bangladesh</option>
+      <option>Belgica</option>
+      <option>Bielorrusia</option>
+       <option>Bolivia</option>
+      <option>Bosnia</option>
+      <option>Brasil</option>
+      <option>Camerun</option>
+      <option>Canada</option>
+      <option>Chile</option>
+      <option>China</option>
+      <option>Chipre</option>
+      <option>Colombia</option>
+      <option>Coreadelsur</option>
+      <option>Costa de marfil</option>
+      <option>Costa rica</option>
+      <option>Croacia</option>
+      <option>Cuba</option>
+      <option>Curazao</option>
+      <option>Dinamarca</option>
+      <option>Ecuador</option>
+      <option>Egipto</option>
+      <option>El salvador</option>
+      <option>Emiratos arabes</option>
+      <option>Escocia</option>
+      <option>Eslovaquia</option>
+      <option>Eslovenia</option>
+      <option>Espana</option>
+      <option>Eslovenia</option>
+      <option>Estonia</option>
+      <option>Finlandia</option>
+      <option>Francia</option>
+      <option>Gales</option>
+      <option>Georgia</option>
+      <option>Ghana</option>
+      <option>Gibraltar</option>
+      <option>Granada</option>
+      <option>Grecia</option>
+      <option>Guatemala</option>
+      <option>Honduras</option>
+      <option>Hungria</option>
+      <option>Inglaterra</option>
+      <option>Irak</option>
+      <option>Iran</option>
+      <option>Irlanda</option>
+      <option>Irlanda del norte</option>
+      <option>Islandia</option>
+      <option>Islas feroe</option>
+      <option>Islas malvinas</option>
+      <option>Islas marshall</option>
+      <option>Islas salomon</option>
+      <option>Italia</option>
+      <option>Jamaica</option>
+      <option>Japon</option>
+      <option>Jordania</option>
+      <option>kazakhstan</option>
+      <option>kosovo</option>
+      <option>Letonia</option>
+      <option>Liechtenstein</option>
+      <option>Lituania</option>
+      <option>Luxemburgo</option>
+      <option>Macedonia</option>
+      <option>Mali</option>
+      <option>Malta</option>
+      <option>Marruecos</option>
+      <option>Martinica</option>
+      <option>Mexico</option>
+      <option>Moldavia</option>
+      <option>Montenegro</option>
+      <option>Nicaragua</option>
+      <option>Nigeria</option>
+      <option>Noruega</option>
+      <option>Nuevazelanda</option>
+      <option>Paisesbajos</option>
+      <option>Panama</option>
+      <option>Paraguay</option>
+      <option>Peru</option>
+      <option>Polonia</option>
+      <option>Portugal</option>
+      <option>Qatar</option>
+      <option>Republica dominicana</option>
+      <option>Republica checa</option>
+      <option>Rumania</option>
+      <option>Rusia</option>
+      <option>San marino</option>
+      <option>Senegal</option>
+      <option>Serbia</option>
+      <option>Sudafrica</option>
+      <option>Suecia</option>
+      <option>Suiza</option>
+      <option>Surinam</option>
+      <option>Tahiti</option>
+      <option>Tunez</option>
+      <option>Turquia</option>
+      <option>Ucrania</option>
+      <option>Uruguay</option>
+      <option>Usa</option>
+      <option>Venezuela</option>
+    </select>
+
+    <button id="iniciar">Iniciar Partido</button>
+  </div>
+
+  <audio autoplay loop>
+    <source src="assets/audio/click.mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script>
+    const selectLocal = document.getElementById('equipo-local');
+    const selectVisitante = document.getElementById('equipo-visitante');
+    const escudoLocal = document.getElementById('escudo-local');
+    const escudoVisitante = document.getElementById('escudo-visitante');
+
+    function actualizarEscudos() {
+      escudoLocal.src = `assets/img/escudos/${selectLocal.value}.png`;
+      escudoVisitante.src = `assets/img/escudos/${selectVisitante.value}.png`;
+    }
+
+    selectLocal.addEventListener('change', actualizarEscudos);
+    selectVisitante.addEventListener('change', actualizarEscudos);
+
+    const btnIniciar = document.getElementById('iniciar');
+    btnIniciar.addEventListener('click', () => {
+      const equipoLocal = selectLocal.value;
+      const equipoVisitante = selectVisitante.value;
+
+      if (equipoLocal === equipoVisitante) {
+        alert("No puedes seleccionar el mismo equipo para ambos lados, bro.");
+        return;
+      }
+
+      localStorage.setItem('equipoLocal', equipoLocal);
+      localStorage.setItem('equipoVisitante', equipoVisitante);
+      window.location.href = 'partido.html';
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        btnIniciar.click();
+      } else if (e.key === 'Escape') {
+        alert("Volverás al menú principal (pero aún no lo hemos hecho jeje)");
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+

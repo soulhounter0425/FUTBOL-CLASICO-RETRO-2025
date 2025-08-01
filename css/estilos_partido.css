@@ -1,0 +1,18 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #1a535c; /* Un color de fondo que simula la noche o el estadio oscuro */
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#campoDeJuego {
+    background-color: #386641; /* Color verde del campo */
+    border: 2px solid #222;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,14 @@
+[
+    { "id": "arg", "nombre": "Argentina" },
+    { "id": "bra", "nombre": "Brasil" },
+    { "id": "col", "nombre": "Colombia" },
+    { "id": "uru", "nombre": "Uruguay" },
+    { "id": "ita", "nombre": "Italia" },
+    { "id": "esp", "nombre": "España" },
+    { "id": "fra", "nombre": "Francia" },
+    { "id": "ale", "nombre": "Alemania" },
+    { "id": "ing", "nombre": "Inglaterra" },
+    { "id": "ned", "nombre": "Países Bajos" },
+    { "id": "por", "nombre": "Portugal" },
+    { "id": "bel", "nombre": "Bélgica" }
+]

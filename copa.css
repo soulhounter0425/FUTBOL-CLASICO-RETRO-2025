@@ -1,0 +1,78 @@
+body {
+  background: url('assets/img/competencias/mundial.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding-bottom: 140px;
+}
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  text-shadow: 2px 2px 8px #000;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+#seleccion-pais {
+  width: 320px;
+  font-size: 16px;
+  margin: 20px auto 14px auto;
+  display: block;
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid #00cc66;
+  background: #fff;
+  color: #222;
+}
+#btn-iniciar {
+  display: block;
+  margin: 0 auto 38px auto;
+  background-color: #00cc66;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#grupos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 10px 24px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+.grupo {
+  background: rgba(0, 0, 0, 0.68);
+  border-radius: 20px;
+  padding: 16px 16px 10px 16px;
+  min-height: 156px;
+}
+.grupo h2 {
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 12px;
+  color: #00ff99;
+  letter-spacing: 1px;
+}
+.lista-equipos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lista-equipos li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.lista-equipos img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-right: 12px;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #ddd;
+}

@@ -1,0 +1,99 @@
+/* Reset general */
+body {
+    margin: 0;
+    overflow: hidden; /* Evita barras de scroll innecesarias */
+    background: url("../assets/img/fondo_coca_cola.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Press Start 2P", monospace;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* VIDEO DE INTRODUCCIÓN */
+#introVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* detrás del overlay */
+}
+
+/* CAPA NEGRA SEMITRANSPARENTE */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(10, 10, 10);
+    font-size: 2em;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* CONTENEDOR DE SELECCIONES */
+.selecciones-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* CADA SELECCIÓN */
+.seleccion {
+    width: 100px;
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.seleccion:hover {
+    transform: scale(1.1);
+}
+
+.seleccion img {
+    width: 80px;
+    height: auto;
+}
+
+/* RESUMEN DE LOS DOS EQUIPOS ELEGIDOS */
+.resumen-seleccion {
+    margin-top: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* BOTÓN PARA INICIAR PARTIDO */
+#btn-iniciar {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #00ff00;
+    color: black;
+    border: none;
+    border-radius: 10px;
+}
+
+/* ENLACE PARA VOLVER */
+a.volver {
+    color: yellow;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+

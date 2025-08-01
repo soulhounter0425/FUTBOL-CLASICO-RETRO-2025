@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FÚTBOL RETRO 25</title>
+
+  <!-- Fuentes retro -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Press Start 2P', cursive;
+      background: url('assets/img/fondo_menu.png') no-repeat center center/cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .game-container {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+    }
+
+    .main-title-container {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .title-retro {
+      color: white;
+    }
+
+    .red-circle {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background-color: red;
+      border-radius: 50%;
+      margin: 0 4px;
+    }
+
+    .title-25 {
+      color: #00ffff;
+    }
+
+    .panel-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .pulse-start {
+      font-size: 14px;
+      margin-bottom: 20px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
+    }
+
+    .menu-options {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-item {
+      margin: 10px 0;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .menu-item:hover {
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <header class="main-title-container">
+      <span class="title-retro">RETR</span><span class="red-circle"></span><span class="title-25">25</span>
+    </header>
+
+    <main class="menu-panel">
+      <h2 class="panel-title">FÚTBOL RETRO 25</h2>
+      <p class="pulse-start">PULSE START</p>
+      <ul class="menu-options">
+        <li class="menu-item seleccionable" tabindex="0">- Partido de Exhibición</li>
+        <li class="menu-item seleccionable" tabindex="0">- Liga</li>
+        <li class="menu-item seleccionable" tabindex="0">- Copa Mundial</li>
+        <li class="menu-item seleccionable" tabindex="0">- eurocopa</li>
+        <li class="menu-item seleccionable" tabindex="0">- Copa América</li>
+        <li class="menu-item seleccionable" tabindex="0">- Copa Asiática</li>
+        <li class="menu-item seleccionable" tabindex="0">- Copa Africana</li>
+        <li class="menu-item seleccionable" tabindex="0">- Copa Oceánica</li>
+        <li class="menu-item seleccionable" tabindex="0">- Salir</li>
+      </ul>
+    </main>
+  </div>
+
+  <!-- Música de fondo -->
+  <audio autoplay loop id="bgm">
+    <source src="assets/audio/intro.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <!-- Script corregido -->
+  <script>
+    const opciones = document.querySelectorAll(".menu-item");
+
+    opciones.forEach((opcion, index) => {
+      opcion.addEventListener("click", () => {
+        switch (index) {
+          case 0: window.location.href = "partido_exhibicion.html"; break;
+          case 1: window.location.href = "eurocopa.html"; break;
+          case 2: window.location.href = "copa.html"; break;
+          case 3: window.location.href = "copa_america.html"; break;
+          case 4: window.location.href = "copa_asiatica.html"; break;
+          case 5: window.location.href = "copa_africana.html"; break;
+          case 6: window.location.href = "copa_oceanica.html"; break;
+          case 7: window.location.href = "index.html"; break; // Salir
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

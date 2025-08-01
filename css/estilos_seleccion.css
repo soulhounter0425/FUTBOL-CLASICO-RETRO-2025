@@ -1,0 +1,84 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #222;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.seleccion-equipos-container {
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.seleccion-panel {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.equipo-local, .equipo-visitante {
+    flex: 1;
+}
+
+.equipo-local h2, .equipo-visitante h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.selector-equipo select {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #777;
+    background-color: #444;
+    color: #f0f0f0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.vs {
+    font-size: 2em;
+    color: #aaa;
+}
+
+button#iniciar-partido {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+button#iniciar-partido:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+button#iniciar-partido:disabled {
+    background-color: #777;
+    cursor: not-allowed;
+}

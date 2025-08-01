@@ -1,0 +1,209 @@
+/* ==================== Fútbol Retro 25 Style ==================== */
+
+/* Base styles */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1rem 0 0;
+  color: #00ff99;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #00ff99bb, 0 2px 0 #222;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  padding: 10px;
+  gap: 10px;
+  font-size: 14px;
+  border-bottom: 2px solid #00ff99;
+  box-shadow: 0 2px 8px #00ff9944;
+  position: relative;
+  z-index: 2;
+}
+
+.scoreboard .team {
+  margin: 0 8px;
+  color: #00ff99;
+  text-shadow: 0 0 3px #00ff99cc;
+}
+
+.scoreboard .escudo {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 0 6px #fff6) drop-shadow(0 0 2px #00ff99);
+  background: #111;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00ff99;
+}
+
+/* Mejora: Alinear verticalmente el texto de marcador */
+.scoreboard span,
+.scoreboard img,
+.scoreboard .time {
+  vertical-align: middle;
+}
+
+/* Mejora: Espacio entre el marcador y los escudos */
+.scoreboard .team {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+/* Mejora: Suavizar los números del marcador */
+.scoreboard #score-local,
+.scoreboard #score-visitante {
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 4px #00ff99dd;
+  font-weight: bold;
+}
+
+/* Mejora: Mejor visibilidad del tiempo */
+.scoreboard .time {
+  margin-left: 20px;
+  color: #ccc;
+  font-size: 13px;
+  text-shadow: 0 1px 2px #000a;
+  letter-spacing: 1px;
+}
+
+.scoreboard .dash {
+  color: #fff;
+  margin: 0 5px;
+  font-size: 18px;
+}
+
+/* Field (cancha) */
+.cancha {
+  position: relative;
+  width: 768px;
+  height: 512px;
+  margin: 20px auto;
+  border: 4px solid #00ff99;
+  background-image: url('assets/sprites/cancha/cancha.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  box-shadow: 0 0 40px #00ff99cc, 0 4px 48px #000c;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+/* Mejora: Fondo oscuro debajo del campo para evitar parpadeos */
+.cancha::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background: #0a0a0a;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Mejora: Fondo de la cancha como imagen fija debajo del canvas */
+#bg-cancha {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Canvas encima de la cancha */
+canvas#gameCanvas {
+  display: block;
+  margin: 0 auto;
+  border: 4px solid #00ff99;
+  border-radius: 7px;
+  background-color: transparent;
+  image-rendering: pixelated;
+  box-shadow: 0 0 20px #00ff9988, 0 0 3px #fff2;
+  outline: none;
+  position: absolute;
+  left: 0; top: 0;
+  z-index: 1;
+}
+
+/* Hide default outline on click/focus */
+canvas:focus {
+  outline: none;
+}
+
+/* Audio controls hidden */
+audio {
+  display: none;
+}
+
+/* Responsive design */
+@media (max-width: 820px) {
+  .cancha {
+    width: 95vw;
+    height: calc(95vw * 512 / 768);
+    min-width: 320px;
+    min-height: 213px;
+    max-width: 768px;
+    max-height: 512px;
+  }
+  #bg-cancha,
+  canvas#gameCanvas {
+    width: 95vw !important;
+    height: calc(95vw * 512 / 768) !important;
+    max-width: 768px;
+    max-height: 512px;
+  }
+  .scoreboard {
+    font-size: 11px;
+    padding: 7px;
+    gap: 5px;
+  }
+  .scoreboard .escudo {
+    width: 24px;
+    height: 24px;
+  }
+  .scoreboard #score-local,
+  .scoreboard #score-visitante {
+    font-size: 16px;
+  }
+}
+
+/* Custom scrollbar (optional for retro look) */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ff99;
+  border-radius: 8px;
+}
+
+#anuncio-gol {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #ff0;
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 4px 4px 0 #f00, -4px -4px 0 #f00;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px 40px;
+  border: 4px solid #ff0;
+  z-index: 999;
+  display: none;
+}
+/* ==================== Fin de style.css ==================== */

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eurocopa Retro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="copa.css">
+  <style>
+    body {
+      background: url('assets/img/competencias/copaamerica.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+    }
+    #video-intro {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 999;
+    }
+    #video-intro.finished {
+      display: none;
+    }
+    .grupo {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 16px;
+      margin: 16px auto;
+      max-width: 340px;
+    }
+    .lista-equipos {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .lista-equipos li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .lista-equipos img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      margin-right: 12px;
+      border-radius: 6px;
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+    #seleccion-pais {
+      width: 300px;
+      font-size: 16px;
+      margin: 20px auto 30px auto;
+      display: block;
+    }
+    #btn-iniciar {
+      display: block;
+      margin: 0 auto 40px auto;
+      background-color: #00cc66;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-family: 'Press Start 2P', cursive;
+      cursor: pointer;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      text-shadow: 2px 2px 8px #000;
+    }
+    @media (max-width: 600px) {
+      .grupo { max-width: 98vw; }
+      #seleccion-pais { width: 98vw; }
+    }
+  </style>
+</head>
+<body>
+  <video id="video-intro" autoplay muted>
+    <source src="assets/video/intro_copamerica.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+
+  <audio id="bgm-copa" src="assets/audio/intro_copaamerica.mp3" autoplay loop></audio>
+
+  <h1>Eurocopa Retro</h1>
+
+  <select id="seleccion-pais"></select>
+  <button id="btn-iniciar">INICIAR copa_america</button>
+
+  <div id="grupos-container">
+    <div class="grupo" id="grupo-a"><h2>Grupo A</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-b"><h2>Grupo B</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-c"><h2>Grupo C</h2><ul class="lista-equipos"></ul></div>
+    <div class="grupo" id="grupo-d"><h2>Grupo D</h2><ul class="lista-equipos"></ul></div>
+    
+  </div>
+
+  <div id="fase-final">
+    <h2 style="text-align:center">Fase Final</h2>
+    <div id="octavos" class="fase">
+      <h3>Octavos de Final</h3>
+      <ul class="lista-equipos"></ul>
+    </div>
+    <div id="cuartos" class="fase">
+      <h3>Cuartos de Final</h3>
+      <ul class="lista-equipos"></ul>
+    </div>
+    <div id="semifinal" class="fase">
+      <h3>Semifinal</h3>
+      <ul class="lista-equipos"></ul>
+    </div>
+    <div id="final" class="fase">
+      <h3>Final</h3>
+      <ul class="lista-equipos"></ul>
+    </div>
+    <div id="ingreso-partido" style="text-align:center; margin-top:30px;">
+      <button onclick="window.location.href='partido.html'" style="padding: 10px 20px; font-size: 14px; font-family: 'Press Start 2P'; border: none; border-radius: 10px; background: #00cc66; color: white; cursor: pointer;">INGRESAR A LA CANCHA</button>
+    </div>
+  </div>
+
+  <script src="copa_america.js"></script>
+  <script>
+    const video = document.getElementById('video-intro');
+    video.addEventListener('ended', () => {
+      video.classList.add('finished');
+    });
+  </script>
+</body>
+</html>
+
+
